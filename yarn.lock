@@ -6,13 +6,7 @@
   version "12.0.7"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.7.tgz#4f2563bad652b2acb1722d7e7aae2b0ff62d192c"
 
-"@types/p-limit@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@types/p-limit/-/p-limit-2.2.0.tgz#94a608e9b258a6c6156a13d1a14fd720dba70b97"
-  dependencies:
-    p-limit "*"
-
-p-limit@*, p-limit@^2.2.0:
+p-limit@^2.2.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/p-limit/-/p-limit-2.2.0.tgz#417c9941e6027a9abcba5092dd2904e255b5fbc2"
   dependencies:
