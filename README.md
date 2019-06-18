@@ -6,7 +6,7 @@ The concu library helps you processing series of data (typically an array) by ch
 
 This is a great way of parellization simple processing which have no side effects. Most gains of parellelization can be be achieved for I/O intensive processing.
 
-It is a small wrapper around [pLimit](https://github.com/sindresorhus/p-limit)
+It is a small wrapper around [pLimit](https://github.com/sindresorhus/p-limit) and `Promise.all()`
 
 # Usage
 
