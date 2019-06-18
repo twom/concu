@@ -20,7 +20,7 @@ const dataToProcess: number[] = [...Array(10000).keys()]
 
 
 // Dummy method to just calculate the sum
-const processData = (numbers: number[]) {
+const processData = (numbers: number[]): Promise<number> {
    return numbers.reduce( (sum, val) => sum+val ), 0);
 }
 
@@ -31,7 +31,9 @@ const run = async () => {
    await concu(processData, concurrency, chunkSize, dataToProcess)
 }
 
-run();
+run().then( (result: number[]) => { 
+   const sum = result.reduce( (total, value) => total + value), 0);
+   console.log( sum );
 ```
 
 
