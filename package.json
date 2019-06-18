@@ -1,6 +1,6 @@
 {
   "name": "concu",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Concurrent execution of a method on a series of data",
   "main": "lib/index.js",
   "scripts": {
@@ -20,5 +20,9 @@
   "devDependencies": {
     "@types/node": "^12.0.7",
     "typescript": "3.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twom/concu.git"
   }
 }

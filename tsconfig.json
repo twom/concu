@@ -4,11 +4,13 @@
     "lib": [
       "es2015.promise" // Or "es2015" or "es6" should work as well
     ],
+    "sourceMap": true,
     "module": "commonjs",
     "declaration": true,
     "outDir": "./lib",
-    "strict": true
+    "strict": true,
+    "downlevelIteration": true
   },
   "include": ["./src"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "exclude": ["node_modules", "**/__tests__/*", "examples"]
 }

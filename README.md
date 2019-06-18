@@ -63,3 +63,6 @@ how many executions in parallel
  optional arguments that will be passed to _fun_
 
 
+# Acknowledgments
+
+This work has been created at [Locai Solutions](https://www.locaisolutions.com) as part of the data import efforts.
