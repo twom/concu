@@ -36,19 +36,25 @@ run();
 
 
 # API
+
 *concu(fun, chunkSize, concurrency, data, ...args)*
+
 returns a Promise resolving to an array of individual results of each individual execution
 
 _fun: (data: any[], ...args: any) => any_
+
 function which accepts a data array and other possible arguments:
  
-  _chunkSize: number_
-  How many elements of the array to be processed
+_chunkSize: number_
+
+How many elements of the array to be processed
  
- _concurrency: number_
- how many executions in parallel
+_concurrency: number_
+
+how many executions in parallel
  
  _...args: any_
+ 
  optional arguments that will be passed to _fun_
 
 
