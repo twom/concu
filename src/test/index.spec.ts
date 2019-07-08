@@ -1,4 +1,6 @@
-import { concu } from "../lib/"
+import { concu } from "../src/index";
+import { expect } from "chai";
+import "mocha";
 
 // create an array with 10000 elements
 const array = Array(1000);

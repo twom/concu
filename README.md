@@ -2,11 +2,17 @@
 A simple method wrapper for concurrent (asynchronous) processing of data series in javascript.
 
 # Introduction
-The Concu library helps you processing series of data (typically an array) by chunking your data in smaller bits and concurrently processing these chunks. This is achieved by provider a thin wrapper around around [pLimit](https://github.com/sindresorhus/p-limit) and `Promise.all()`
+The Concu library helps you processing series of data (typically an array) by chunking your data in smaller bits and concurrently processing these chunks.
+This is typically useful if you have the possibility of processing data in parallel, however you want to have control over:
+- how many concurrent executions
+- size of the batch being processed
 
-Concu provides a great way of parellization of function calls. Most gains of parellelization can be be achieved for I/O intensive processing. 
+Limiting concurrency and batch size may be needed because of downstream I/O dependencies.
 
-As a bonus this allows also for sequential processing on large arrays by setting concurrency to 1.
+When opted for concurrency of 1, the method presents a simple sequential execution on partial data chunks.
+
+# Internals
+Concu is basically a simple wrapper around around [pLimit](https://github.com/sindresorhus/p-limit) and `Promise.all()`
 
 
 # Usage
@@ -65,5 +71,6 @@ how many executions in parallel
 
 
 # Acknowledgments
+
 
 This work has been created at [Locai Solutions](https://www.locaisolutions.com) as part of the data import efforts.
