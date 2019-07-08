@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/twom/concu/tree/master.svg?style=svg)](https://circleci.com/gh/twom/concu/tree/master)
+
 # concu
 A simple method wrapper for concurrent (asynchronous) processing of data series in javascript.
 
