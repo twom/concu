@@ -13,6 +13,8 @@ Limiting concurrency and batch size may be needed because of downstream I/O depe
 
 When opted for concurrency of 1, the method presents a simple sequential execution on partial data chunks.
 
+The original focus was on helping to process large CSV files for which each row had a lot of IO, and each row could be processed independently of any other row.
+
 # Internals
 Concu is basically a simple wrapper around around [pLimit](https://github.com/sindresorhus/p-limit) and `Promise.all()`
 
