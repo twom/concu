@@ -9,7 +9,7 @@ const pLimit = require("p-limit");
  * @param args
  */
 export function *generateChunkedCalls(fn: (data: any[], ...args: any) => any, chunkSize: number, concurrency: number,
-                                      data: any[], ...args?: any[])  {
+                                      data: any[], ...args: any[])  {
     const limit = pLimit(concurrency);
     for (let i = 0; i * chunkSize < data.length; i++ ) {
         const dataChunked = data.slice(i * chunkSize, (i + 1) * chunkSize);
@@ -26,8 +26,9 @@ export function *generateChunkedCalls(fn: (data: any[], ...args: any) => any, ch
  * @param args
  */
 export const concu = async (fn: (data:any [], ...args: any) => any, chunkSize: number, concurrency: number,
-                      data: any[], args?: any[]) => {
+                      data: any[], ...args: any[]) => {
     return await Promise.all(
-        generateChunkedCalls(fn, chunkSize, concurrency, data, args)
+        generateChunkedCalls(fn, chunkSize, concurrency, data, ...args)
     )
 }
+
