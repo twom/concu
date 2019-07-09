@@ -24,7 +24,7 @@ Concu is basically a simple wrapper around around [pLimit](https://github.com/si
 Typescript example
 
 ```javascript
-import { concu } from "../lib/"
+import { concu } from "concu"
 
 // create an array with 10000 elements
 const array = Array(1000);
