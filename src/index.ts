@@ -26,7 +26,7 @@ export function *generateChunkedCalls(fn: (data: any[], ...args: any) => any, ch
  * @param args
  */
 export const concu = async (fn: (data:any [], ...args: any) => any, chunkSize: number, concurrency: number,
-                      data: any[], ...args: any[]) => {
+                      data: any[], ...args: any[]): Promise<any[]> => {
     return await Promise.all(
         generateChunkedCalls(fn, chunkSize, concurrency, data, ...args)
     )
