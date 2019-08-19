@@ -1,5 +1,7 @@
+[![CircleCI](https://circleci.com/gh/twom/concu/tree/master.svg?style=svg)](https://circleci.com/gh/twom/concu/tree/master)
+
 # concu
-A simple method wrapper for concurrent (asynchronous) processing of data series in javascript.
+A simple method wrapper for concurrent processing of an array in javascript.
 
 # Introduction
 The Concu library helps you processing series of data (typically an array) by chunking your data in smaller bits and concurrently processing these chunks.
@@ -11,6 +13,8 @@ Limiting concurrency and batch size may be needed because of downstream I/O depe
 
 When opted for concurrency of 1, the method presents a simple sequential execution on partial data chunks.
 
+The original focus was on helping to process large CSV files for which each row had a lot of IO, and each row could be processed independently of any other row.
+
 # Internals
 Concu is basically a simple wrapper around around [pLimit](https://github.com/sindresorhus/p-limit) and `Promise.all()`
 
@@ -20,7 +24,7 @@ Concu is basically a simple wrapper around around [pLimit](https://github.com/si
 Typescript example
 
 ```javascript
-import { concu } from "../lib/"
+import { concu } from "concu"
 
 // create an array with 10000 elements
 const array = Array(1000);
@@ -53,9 +57,9 @@ run().then( (result: number[]) => {
 
 returns a Promise resolving to an array of individual results of each individual execution
 
-_fun: (data: any[], ...args: any) => any_
+_fun: (data: any[], ...args: any[]) => any_
 
-function which accepts a data array and other possible arguments:
+function which accepts a data array and other possible arguments.
  
 _chunkSize: number_
 
@@ -65,7 +69,7 @@ _concurrency: number_
 
 how many executions in parallel
  
- _...args: any_
+ _...args: any[]_
  
  optional arguments that will be passed to _fun_
 
