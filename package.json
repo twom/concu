@@ -1,6 +1,6 @@
 {
   "name": "concu",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Concurrent execution of a method on a series of data",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
