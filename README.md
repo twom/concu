@@ -3,6 +3,8 @@
 # concu
 A simple method wrapper for concurrent processing of an array in javascript.
 
+See [introduction blog post](https://engineering.locai.io/concu-typscripe-nodejs-wrapper-concurrent-processing/) on the [Locai Engineering Blog](https://engineering.locai.io)
+
 # Introduction
 The Concu library helps you processing series of data (typically an array) by chunking your data in smaller bits and concurrently processing these chunks.
 This is typically useful if you have the possibility of processing data in parallel, however you want to have control over:
